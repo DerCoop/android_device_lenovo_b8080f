@@ -16,11 +16,12 @@
 #
 
 # Inherit some common LineageOS stuff.
+# XMSX tablet
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-$(call inherit-product, device/samsung/s3ve3gjv/full_s3ve3gjv.mk)
+$(call inherit-product, device/lenovo/b8080f/full_b8080f.mk)
 
-PRODUCT_DEVICE := s3ve3gjv
-PRODUCT_NAME := lineage_s3ve3gjv
+PRODUCT_DEVICE := b8080f
+PRODUCT_NAME := lineage_b8080f
 
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo

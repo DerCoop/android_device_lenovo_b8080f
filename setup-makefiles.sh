@@ -8,9 +8,9 @@
 
 set -e
 
-export DEVICE=s3ve3gjv
-export DEVICE_COMMON=s3ve3g-common
-export VENDOR=samsung
+export DEVICE=b8080f
+export DEVICE_COMMON=b8080f-common
+export VENDOR=lenovo
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

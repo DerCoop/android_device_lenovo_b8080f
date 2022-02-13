@@ -15,20 +15,21 @@
 # limitations under the License.
 #
 
+# XMSX tablet?
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/s3ve3gjv/s3ve3gjv-vendor.mk)
+$(call inherit-product, vendor/lenovo/b8080f/b8080f-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # NFC
-# $(call inherit-product, device/samsung/s3ve3g-common/nfc/pn547/product.mk)
+# $(call inherit-product, device/lenovo/b8080f-common/nfc/pn547/product.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# common s3ve3g
-$(call inherit-product, device/samsung/s3ve3g-common/s3ve3g.mk)
+# common b8080f
+$(call inherit-product, device/lenovo/b8080f-common/b8080f.mk)

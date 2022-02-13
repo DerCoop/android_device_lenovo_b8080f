@@ -13,16 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common s3ve3g
-include device/samsung/s3ve3g-common/BoardConfigCommon.mk
+# inherit from common b8080f
+include device/lenovo/b8080f-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/s3ve3gjv
+DEVICE_PATH := device/lenovo/b8080f
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage_s3ve3gjv_defconfig
+TARGET_KERNEL_CONFIG := lineage_b8080f_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_s3ve3g
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_b8080f
 
 # NFC
 # include $(COMMON_PATH)/nfc/pn547/board.mk
@@ -31,4 +31,4 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_s3ve3g
 include $(COMMON_PATH)/radio/single/board.mk
 
 # inherit from the proprietary version
-include vendor/samsung/s3ve3gjv/BoardConfigVendor.mk
+include vendor/lenovo/b8080f/BoardConfigVendor.mk

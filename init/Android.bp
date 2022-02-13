@@ -15,11 +15,11 @@
 //
 
 cc_library_static {
-    name: "libinit_s3ve3g",
+    name: "libinit_b8080f",
     recovery_available: true,
-    srcs: ["init_s3ve3g.cpp"],
+    srcs: ["init_b8080f.cpp"],
     include_dirs: [
-        "device/samsung/msm8226-common/init",
+        "device/lenovo/msm8226-common/init",
         "system/core/base/include",
         "system/core/init",
     ],

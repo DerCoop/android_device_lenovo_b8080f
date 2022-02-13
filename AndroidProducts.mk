@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_s3ve3gjv.mk
+    $(LOCAL_DIR)/lineage_b8080f.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_s3ve3gjv-user \
-    lineage_s3ve3gjv-userdebug \
-    lineage_s3ve3gjv-eng
+    lineage_b8080f-user \
+    lineage_b8080f-userdebug \
+    lineage_b8080f-eng
