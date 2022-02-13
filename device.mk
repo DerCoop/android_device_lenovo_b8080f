@@ -1,4 +1,5 @@
-# Copyright (C) 2014-2016 The CyanogenMod Project
+#
+# Copyright (C) 2014 The CyanogenMod Project
 # Copyright (C) 2017-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,23 +13,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# inherit from common s3ve3g
-include device/samsung/s3ve3g-common/BoardConfigCommon.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-DEVICE_PATH := device/samsung/s3ve3gjv
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/samsung/s3ve3gjv/s3ve3gjv-vendor.mk)
 
-# Kernel
-TARGET_KERNEL_CONFIG := lineage_s3ve3gjv_defconfig
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_s3ve3g
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # NFC
-# include $(COMMON_PATH)/nfc/pn547/board.mk
+# $(call inherit-product, device/samsung/s3ve3g-common/nfc/pn547/product.mk)
 
-# Radio/RIL
-include $(COMMON_PATH)/radio/single/board.mk
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
 
-# inherit from the proprietary version
-include vendor/samsung/s3ve3gjv/BoardConfigVendor.mk
+# common s3ve3g
+$(call inherit-product, device/samsung/s3ve3g-common/s3ve3g.mk)

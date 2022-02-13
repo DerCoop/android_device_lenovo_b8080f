@@ -1,5 +1,6 @@
+#
 # Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,23 +13,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# inherit from common s3ve3g
-include device/samsung/s3ve3g-common/BoardConfigCommon.mk
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-DEVICE_PATH := device/samsung/s3ve3gjv
+$(call inherit-product, device/samsung/s3ve3gjv/full_s3ve3gjv.mk)
 
-# Kernel
-TARGET_KERNEL_CONFIG := lineage_s3ve3gjv_defconfig
+PRODUCT_DEVICE := s3ve3gjv
+PRODUCT_NAME := lineage_s3ve3gjv
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_s3ve3g
-
-# NFC
-# include $(COMMON_PATH)/nfc/pn547/board.mk
-
-# Radio/RIL
-include $(COMMON_PATH)/radio/single/board.mk
-
-# inherit from the proprietary version
-include vendor/samsung/s3ve3gjv/BoardConfigVendor.mk
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
