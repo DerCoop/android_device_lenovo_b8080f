@@ -16,8 +16,7 @@
 #
 
 # Inherit some common LineageOS stuff.
-# XMSX tablet
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 $(call inherit-product, device/lenovo/b8080f/full_b8080f.mk)
 

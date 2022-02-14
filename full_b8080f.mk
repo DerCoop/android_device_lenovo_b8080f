@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-# XMSX tablet
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from b8080fdevice
 $(call inherit-product, device/lenovo/b8080f/device.mk)
