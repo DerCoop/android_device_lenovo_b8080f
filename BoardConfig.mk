@@ -32,3 +32,8 @@ include $(COMMON_PATH)/radio/single/board.mk
 
 # inherit from the proprietary version
 include vendor/lenovo/b8080f/BoardConfigVendor.mk
+
+# FAILED: 
+#hardware/ril/reference-ril/Android.mk: error: "libreference-ril (SHARED_LIBRARIES android-arm) missing libril (SHARED_LIBRARIES android-arm)" 
+#maybe some dependency because this was copied from samsung s3neo
+#ALLOW_MISSING_DEPENDENCIES := true
